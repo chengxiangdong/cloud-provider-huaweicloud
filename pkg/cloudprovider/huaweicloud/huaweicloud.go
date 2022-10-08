@@ -427,6 +427,8 @@ func NewHWSCloud(config io.Reader) (*HWSCloud, error) {
 		return nil, err
 	}
 
+	// Do not verify TLS certificates, ignore x509.
+	clientConfig.TLSClientConfig.Insecure=true
 	kubeClient, err := corev1.NewForConfig(clientConfig)
 	if err != nil {
 		return nil, err
