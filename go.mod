@@ -3,19 +3,27 @@ module sigs.k8s.io/cloud-provider-huaweicloud
 go 1.13
 
 require (
-	github.com/fsnotify/fsnotify v1.4.9
+	github.com/BurntSushi/toml v1.0.0 // indirect
+	github.com/fsnotify/fsnotify v1.5.1
 	github.com/hashicorp/golang-lru v0.5.1
 	github.com/huaweicloud/huaweicloud-sdk-go-v3 v0.0.6-beta
-	k8s.io/api v0.19.14
-	k8s.io/apimachinery v0.19.14
-	k8s.io/client-go v0.19.14
+	github.com/onsi/ginkgo/v2 v2.1.3
+	github.com/onsi/gomega v1.18.1
+	github.com/spf13/cobra v1.4.0 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
+	k8s.io/api v0.24.2
+	k8s.io/apimachinery v0.24.2
+	k8s.io/client-go v0.24.2
 	k8s.io/cloud-provider v0.19.14
-	k8s.io/component-base v0.19.14
+	k8s.io/component-base v0.24.2
 	k8s.io/klog v1.0.0
 	k8s.io/kubernetes v1.19.14
+	k8s.io/utils v0.0.0-20220922133306-665eaaec4324
+	sigs.k8s.io/controller-runtime v0.12.2
 )
 
 replace (
+	google.golang.org/grpc => google.golang.org/grpc v1.29.1
 	k8s.io/api => k8s.io/api v0.19.14
 	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.19.14
 	k8s.io/apimachinery => k8s.io/apimachinery v0.19.14
