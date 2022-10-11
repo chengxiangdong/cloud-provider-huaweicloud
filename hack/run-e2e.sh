@@ -10,6 +10,9 @@ mkdir -p "$ARTIFACTS_PATH"
 # Install ginkgo
 go install -mod=mod github.com/onsi/ginkgo/v2/ginkgo@latest
 
+REPO_ROOT=$(dirname "${BASH_SOURCE[0]}")/..
+cd "${REPO_ROOT}"
+
 # Run e2e
 export GOLANG_PROTOBUF_REGISTRATION_CONFLICT=warn
 
