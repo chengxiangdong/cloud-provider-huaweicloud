@@ -51,6 +51,8 @@ jobs:
     name: e2e test
     needs: build
     runs-on: self-hosted
+    strategy:
+      max-paraller: 1
     steps:
       - name: checkout code
         uses: actions/checkout@v2

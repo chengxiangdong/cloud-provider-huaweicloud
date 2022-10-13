@@ -4,6 +4,8 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
+kubectl version
+
 ARTIFACTS_PATH=${ARTIFACTS_PATH:-"${HOME}/e2e-logs"}
 mkdir -p "$ARTIFACTS_PATH"
 
