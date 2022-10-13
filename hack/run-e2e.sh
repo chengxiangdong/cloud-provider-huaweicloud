@@ -26,6 +26,7 @@ ginkgo -v --race --trace --fail-fast -p --randomize-all ./test/e2e/
 TESTING_RESULT=$?
 
 # todo(chengxiangdong): Collect logs
+kubectl logs daemonset/huawei-cloud-controller-manager -n kube-system > huawei-cloud-controller-manager.log
 echo "Collected logs at $ARTIFACTS_PATH:"
 ls -al "$ARTIFACTS_PATH"
 
