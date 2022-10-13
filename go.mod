@@ -6,6 +6,9 @@ require (
 	github.com/fsnotify/fsnotify v1.4.9
 	github.com/hashicorp/golang-lru v0.5.1
 	github.com/huaweicloud/huaweicloud-sdk-go-v3 v0.0.6-beta
+	github.com/imdario/mergo v0.3.6 // indirect
+	github.com/onsi/ginkgo/v2 v2.1.4
+	github.com/onsi/gomega v1.19.0
 	k8s.io/api v0.19.14
 	k8s.io/apimachinery v0.19.14
 	k8s.io/client-go v0.19.14
@@ -13,6 +16,7 @@ require (
 	k8s.io/component-base v0.19.14
 	k8s.io/klog v1.0.0
 	k8s.io/kubernetes v1.19.14
+	k8s.io/utils v0.0.0-20200729134348-d5654de09c73
 )
 
 replace (
