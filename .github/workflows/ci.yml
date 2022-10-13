@@ -69,10 +69,11 @@ jobs:
           REGISTRY_SERVER_ADDRESS=swr.ap-southeast-1.myhuaweicloud.com VERSION=latest make images
       - name: run e2e
         run: |
+          export ARTIFACTS_PATH=${{ github.workspace }}/e2e-logs
           sh hack/run-e2e.sh
       - name: upload logs
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          name: e2e_log_${{ matrix.k8s }}
+          name: e2e_log
           path: ${{ github.workspace }}/e2e-logs/
