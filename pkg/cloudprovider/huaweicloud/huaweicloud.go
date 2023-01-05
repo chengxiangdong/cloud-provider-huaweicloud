@@ -317,23 +317,6 @@ func (h *CloudProvider) ExternalID(ctx context.Context, instance types.NodeName)
 	return "", cloudprovider.NotImplemented
 }
 
-// type Routes interface {}
-
-// ListRoutes is an implementation of Routes.ListRoutes
-func (h *CloudProvider) ListRoutes(ctx context.Context, clusterName string) ([]*cloudprovider.Route, error) {
-	return nil, nil
-}
-
-// CreateRoute is an implementation of Routes.CreateRoute
-func (h *CloudProvider) CreateRoute(ctx context.Context, clusterName string, nameHint string, route *cloudprovider.Route) error {
-	return nil
-}
-
-// DeleteRoute is an implementation of Routes.DeleteRoute
-func (h *CloudProvider) DeleteRoute(ctx context.Context, clusterName string, route *cloudprovider.Route) error {
-	return nil
-}
-
 // type Zones interface {}
 
 // GetZone is an implementation of Zones.GetZone
@@ -391,7 +374,7 @@ func (h *CloudProvider) Clusters() (cloudprovider.Clusters, bool) {
 
 // Routes returns an implementation of Routes for Huawei Web Services.
 func (h *CloudProvider) Routes() (cloudprovider.Routes, bool) {
-	return h, true
+	return nil, false
 }
 
 // ProviderName returns the cloud provider ID.
